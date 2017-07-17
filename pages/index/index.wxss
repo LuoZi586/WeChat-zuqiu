@@ -1,0 +1,149 @@
+/**index.wxss**/
+   page{
+  height: 100%;
+}   
+.container{
+  position: relative;
+
+}
+.head{
+  width:100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999
+}
+.title{
+  width:100%;
+  height:88rpx;
+  background: #0dc441;
+  text-align: center;
+  line-height: 88rpx;
+}
+.care,.hot{
+  width:120rpx;
+  height:48rpx;
+  display: inline-block;
+  color: white;
+  background: #3dd067;
+  text-align: center;
+  line-height: 48rpx;
+  font-size: 28rpx;
+}
+.hot{
+  border-radius:24rpx 0 0 24rpx 
+}
+.care{
+  border-radius:0 24rpx 24rpx 0 
+}
+.nav{
+  width:100%;
+  height:70rpx;
+  display: flex;
+  justify-content: space-around;
+  border-bottom:1px solid #d9d9d9;
+  line-height: 70rpx;
+  font-size:28rpx;
+  text-align: center;
+  background: white;
+  opacity: 0.7;
+  
+}
+.nav view{
+  
+  flex: 1;
+}
+.active{
+  border-bottom: 2px solid #0dc441;
+  color:#0dc441; 
+}
+
+.content{
+  width:100%;
+  height: 100%;
+  margin-top: 160rpx;
+ 
+}
+.content swiper{
+  width:100%;
+  height:100%;
+}
+.item{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: flex-start
+
+}
+.imgbox{
+  display: flex;
+  flex-direction: column;
+  width:48%;
+  height:374rpx;
+  border:1px solid #d9d9d9;
+  margin-top: 10rpx;
+
+}
+.imgbox image{
+  width:100%;
+
+}
+.imgbox .msg{
+  height:56rpx;
+  font-size: 26rpx;
+  text-indent: 20rpx;
+  line-height: 56rpx;
+  width:80%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.footer{
+  width:100%;
+  height:86rpx;
+  position: fixed;
+  bottom:0;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+ .footer navigator{
+  display: flex;
+  margin-top: 6rpx;
+  flex-direction: column;
+}
+.footer navigator span{
+  text-align: center;
+}
+.icon{
+  width:36rpx;
+  height:38rpx;
+}
+.text{
+  font-size: 26rpx;
+  color: #dddddd;
+}
+.checked{
+  color:#0dc441;
+}
+.camerabox{
+  position: relative;
+  width:106rpx;
+  height: 106rpx;
+}
+.camera{
+  position: absolute;
+  left: 25rpx;
+  top: 2rpx;
+  width:58rpx;
+  height:52rpx;
+  z-index: 20;
+}
+.circle{
+  position: absolute;
+  left: 0;
+  top: -26rpx;
+  width:100%;
+  height: 106rpx;
+} 

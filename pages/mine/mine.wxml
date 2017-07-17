@@ -1,0 +1,60 @@
+<!--pages/mine/mine.wxml-->
+<view class="mine">
+  <view class="title">个人中心</view>
+  <view class="item">
+    <image class="leftpic" src="/imgs/pikaqiu.png"></image>
+    <view class="right-text">
+      <view class="nickname">我叫小萌</view>
+      <view>我是小萌我怕谁！哈哈哈！</view>
+    </view>
+  </view>
+  
+  <view class="nav">
+    <view class="nav-title {{currentTab===0 ? 'active' : ''}}" data-current="0" bindtap="switchNav">照片（{{photo}}）</view>
+    <view class="nav-title {{currentTab===1 ? 'active' : ''}}" data-current="1" bindtap="switchNav">关注（{{care}}）</view>
+    <view class="nav-title {{currentTab===2 ? 'active' : ''}}" data-current="2" bindtap="switchNav">粉丝（{{fans}}）</view>
+  </view>
+  <swiper circular current="{{currentTab}}" bindchange="changeNav">
+      <swiper-item class="item">
+        <block  >
+          <view class="imgbox">
+            <image mode="aspectFit" src="/imgs/3.jpg"></image>
+          </view>
+        </block>
+      </swiper-item>
+
+      <swiper-item class="item">
+        <block >
+          <view class="imgbox">
+            <image src="/imgs/4.jpg"></image>
+          </view>
+        </block>
+      </swiper-item>
+
+      <swiper-item class="item">
+        <block >
+          <view class="imgbox">
+            <image src="/imgs/5.jpg"></image>
+          </view>
+        </block>
+      </swiper-item>
+       
+    </swiper>
+
+  <view class="footer">
+    <navigator data-curr="0" bindtap="check" url="/pages/index/index" >
+      <span ><image wx:if="{{isChecked==0}}" class="icon" src="/imgs/home1.png"></image><image wx:else class="icon" src="/imgs/home.png"></image></span>
+      <span class="text {{isChecked==0?'checked':''}}">首页</span>
+    </navigator>
+    <navigator data-curr="1" bindtap="check" url="/pages/find/find" >
+      <span ><image wx:if="{{isChecked==1}}" class="icon" src="/imgs/search1.png"></image><image wx:else class="icon" src="/imgs/search.png"></image></span>
+      <span class="text {{isChecked==1 ? 'checked' : ''}}">发现</span>
+    </navigator>
+    <navigator url="" class="camerabox"><image class="camera" src="/imgs/camera.png"></image><image class="circle" src="/imgs/7.png"></image></navigator>
+    <navigator data-curr="3" bindtap="check" url="/pages/mine/mine">
+      <span ><image wx:if="{{isChecked==3}}" class="icon" src="/imgs/mine1.png"></image><image wx:else class="icon" src="/imgs/mine.png"></image></span>
+      <span class="text {{isChecked==3?'checked':''}}">我的</span>
+    </navigator>
+    <navigator url=""><span ><image class="icon" src="/imgs/exit.png"></image></span><span class="text">退出</span></navigator>
+  </view>
+</view>

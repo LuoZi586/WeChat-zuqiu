@@ -1,0 +1,64 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="head">
+    <view class="title">
+      <view class="hot">热点</view>
+      <view class="care">关注</view>
+    </view>
+    <view class="nav">
+      <view class="live {{currentTab===0 ? 'active' : ''}}" data-current="0" bindtap="switchNav">足球现场</view>
+      <view class="life {{currentTab===1 ? 'active' : ''}}" data-current="1" bindtap="switchNav">足球生活</view>
+      <view class="girl {{currentTab===2 ? 'active' : ''}}" data-current="2" bindtap="switchNav">足球美女</view>
+     </view>
+  </view>
+  
+  <view class="content">
+    <swiper circular current="{{currentTab}}" bindchange="changeNav">
+      <swiper-item class="item">
+        <block wx:for="{{live}}" wx:key="{{index}}">
+          <view class="imgbox">
+            <image src="{{item.pic}}"></image>
+            <span class="msg">{{item.msg}}</span>
+          </view>
+        </block>
+      </swiper-item>
+
+      <swiper-item class="item">
+        <block wx:for="{{life}}" wx:key="{{index}}">
+          <view class="imgbox">
+            <image src="{{item.pic}}"></image>
+            <span class="msg">{{item.msg}}</span>
+          </view>
+        </block>
+      </swiper-item>
+
+      <swiper-item class="item">
+        <block wx:for="{{girls}}" wx:key="{{index}}">
+          <view class="imgbox">
+            <image src="{{item.pic}}"></image>
+            <span class="msg">{{item.msg}}</span>
+          </view>
+        </block>
+      </swiper-item>
+       
+    </swiper>
+  </view>
+
+  <view class="footer">
+    <navigator data-curr="0" bindtap="check" url="/pages/index/index?isChecked={{isChecked}}" >
+      <span ><image wx:if="{{isChecked==0}}" class="icon" src="/imgs/home1.png"></image><image wx:else class="icon" src="/imgs/home.png"></image></span>
+      <span class="text {{isChecked==0?'checked':''}}">首页</span>
+    </navigator>
+    <navigator data-curr="1" bindtap="check" url="/pages/find/find?isChecked={{isChecked}}" >
+      <span ><image wx:if="{{isChecked==1}}" class="icon" src="/imgs/search1.png"></image><image wx:else class="icon" src="/imgs/search.png"></image></span>
+      <span class="text {{isChecked==1 ? 'checked' : ''}}">发现</span>
+    </navigator>
+    <navigator url="" class="camerabox"><image class="camera" src="/imgs/camera.png"></image><image class="circle" src="/imgs/7.png"></image></navigator>
+    <navigator data-curr="3" bindtap="check" url="/pages/mine/mine?isChecked={{isChecked}}">
+      <span ><image wx:if="{{isChecked==3}}" class="icon" src="/imgs/mine1.png"></image><image wx:else class="icon" src="/imgs/mine.png"></image></span>
+      <span class="text {{isChecked==3?'checked':''}}">我的</span>
+    </navigator>
+    <navigator url=""><span ><image class="icon" src="/imgs/exit.png"></image></span><span class="text">退出</span></navigator>
+  </view>
+
+</view>

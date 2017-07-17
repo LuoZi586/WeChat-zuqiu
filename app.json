@@ -1,0 +1,18 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/find/find",
+    "pages/mine/mine",
+    "pages/login/login",
+    
+    "pages/logs/logs"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "足球圈",
+    "navigationBarTextStyle": "black"
+  }
+  
+}

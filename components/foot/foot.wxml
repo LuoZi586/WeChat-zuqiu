@@ -1,0 +1,18 @@
+<template name="foot">
+  <view class="footer">
+    <navigator data-curr="0" bindtap="check" url="/pages/index/index" >
+      <span ><image wx:if="{{isChecked==0}}" class="icon" src="/imgs/home1.png"></image><image wx:else class="icon" src="/imgs/home.png"></image></span>
+      <span class="text {{isChecked==0?'checked':''}}">首页</span>
+    </navigator>
+    <navigator data-curr="1" bindtap="check" url="/pages/find/find" >
+      <span ><image wx:if="{{isChecked==1}}" class="icon" src="/imgs/search1.png"></image><image wx:else class="icon" src="/imgs/search.png"></image></span>
+      <span class="text {{isChecked==1 ? 'checked' : ''}}">发现</span>
+    </navigator>
+    <navigator url="" class="camerabox"><image class="camera" src="/imgs/camera.png"></image><image class="circle" src="/imgs/7.png"></image></navigator>
+    <navigator data-curr="3" bindtap="check" url="/pages/mine/mine">
+      <span ><image wx:if="{{isChecked==3}}" class="icon" src="/imgs/mine.png"></image><image wx:else class="icon" src="/imgs/mine1.png"></image></span>
+      <span class="text {{isChecked==3?'checked':''}}">我的</span>
+    </navigator>
+    <navigator url=""><span ><image class="icon" src="/imgs/exit.png"></image></span><span class="text">退出</span></navigator>
+  </view>
+</template>

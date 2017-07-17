@@ -1,0 +1,50 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  /*display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;*/
+} 
+
+.footer navigator{
+  display: flex;
+  margin-top: 6rpx;
+  flex-direction: column;
+}
+.footer navigator span{
+  text-align: center;
+}
+.icon{
+  width:36rpx;
+  height:38rpx;
+}
+.text{
+  font-size: 26rpx;
+  color: #dddddd;
+}
+.checked{
+  color:#0dc441;
+}
+.camerabox{
+  position: relative;
+  width:106rpx;
+  height: 106rpx;
+}
+.camera{
+  position: absolute;
+  left: 25rpx;
+  top: 2rpx;
+  width:58rpx;
+  height:52rpx;
+  z-index: 20;
+}
+.circle{
+  position: absolute;
+  left: 0;
+  top: -26rpx;
+  width:100%;
+  height: 106rpx;
+}

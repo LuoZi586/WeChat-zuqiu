@@ -1,0 +1,28 @@
+.box{
+  padding:0 30rpx
+}
+.title{
+  width:100%;
+  height:88rpx;
+  background: #0dc441;
+  text-align: center;
+  line-height: 88rpx;
+  color:white
+}
+input{
+  border-bottom:1px solid gray;
+  height:95rpx;
+}
+.register{
+  font-size: 28rpx;
+  color: #999999;
+  padding:52rpx 0
+}
+.register navigator{
+  color:green;
+  display: inline-block
+}
+.submit{
+  background: #0dc441;
+  color: white
+}
